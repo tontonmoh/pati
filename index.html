@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="Pati - Édition Jeunesse Guinéenne. Livres et contes traditionnels en 8 langues.">
+    <meta name="theme-color" content="#D2691E">
+    <title>Pati - Édition Jeunesse Guinéenne</title>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="app" class="mobile-frame african-pattern relative">
+        <!-- Content injected by JavaScript -->
+    </div>
+
+    <!-- PDF Viewer Overlay -->
+    <div id="pdfViewer" class="pdf-overlay">
+        <div class="flex items-center justify-between p-4 bg-gray-900 text-white">
+            <button onclick="closePdf()" class="flex items-center gap-2 text-sm">
+                <i class="fas fa-arrow-left"></i> Retour
+            </button>
+            <span id="pdfTitle" class="font-bold text-sm truncate max-w-[200px]"></span>
+            <button onclick="closePdf()" class="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <div class="flex-1 bg-gray-800 relative">
+            <iframe id="pdfFrame" class="w-full h-full border-0" src="" title="PDF Viewer"></iframe>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="js/db.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
